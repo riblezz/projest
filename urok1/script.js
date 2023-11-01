@@ -1,10 +1,16 @@
-"use strict" //правильный дафига
+"use strict"
 
-let num = 5 // переменная с цифрай (изменяемая)
-const num2 = 30 //неизменяемая
-num = 2 // меняет значение
-console.log(num) //выводим в консольку чо у нас
-// const answer = confirm("чо") //типа спрашивает да нет
-// alert("мяу") // просто алерт
-let answer2 = prompt("чо", "") //уже моджно ответить
+const numberOfFilms = prompt("Сколько фильмов посмотрели?", "")
+let personalMovieDB = {
+    count:{numberOfFilms},
+    movies:{саня:30},
+    actors:{},
+    genres:[],
+    privat:false
+}
+const lastFilms = prompt("Один из последних просмотреных фильмов?", ""),
+    degreesFilms = prompt("Насколько оцените его?", "")
 
+personalMovieDB.movies[lastFilms] = degreesFilms
+
+console.log(personalMovieDB)
